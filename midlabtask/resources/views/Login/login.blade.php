@@ -2,11 +2,13 @@
 <html>
 <head>
 	<title>Login page</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
 	<h1>Login Page</h1>
 
 	<form method="post">
+        @csrf
         <table>
             <tr>
                 <td>Email</td>
@@ -22,6 +24,9 @@
                 <td></td>
             </tr>
         </table>
+        @foreach ($errors->all() as $error)
+		{{$error}} <br>
+	    @endforeach
 	</form>
 </body>
 </html>
