@@ -31,11 +31,11 @@ class LoginRequest extends FormRequest
 
     public function messages(){
         return [
-            'email.required' => "Email can't left empty...",
-            'email.max' => "Email can be maximum 50 character..",
-            'password.min' => "Must be at least 8 char..",
-            'password.max' => "Password can be maximum 20 character..",
-            'password.required' => "Password can't left empty..."
+            'email.required' => "Please fill up the email field",
+            'email.max' => "Email should be less than 50 characters",
+            'password.min' => "Minimum 8 characters for password",
+            'password.max' => "Password should be less than 20 characters",
+            'password.required' => "Please fill up the password field"
         ];
     }
 }
