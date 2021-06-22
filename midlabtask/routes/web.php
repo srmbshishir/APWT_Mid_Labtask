@@ -19,3 +19,4 @@ Route::get('/', function () {
 
 
 Route::get('/login', 'LoginController@index');
+Route::post('/login', 'LoginController@verify');
